@@ -1,0 +1,65 @@
+.tn-atom {
+  line-height: 53px;
+  color: #363636;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 500;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  margin: 100px;
+  margin-top: 100px;
+}
+.cooperation-span {
+  font-size: 50px;
+}
+
+.tn-atom span {
+  color: rgb(255, 102, 0);
+}
+.container-cooperation {
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.container-cooperation span {
+  color: #363636;
+  font-size: 25px;
+  padding-top: -25px;
+}
+
+.text {
+  line-height: 19px;
+  word-spacing: 10px;
+  font-size: 20px;
+  margin-top: 700px;
+}
+
+.text p {
+  color: #363636;
+  font-size: 15px;
+  font-weight: 500;
+  border-color: transparent;
+  border-style: solid;
+
+  width: 700px;
+  margin-top: 10px;
+}
+
+.img-cooperation {
+  width: 500px;
+  height: 500px;
+  margin-top: -450px;
+  margin-left: 800px;
+  border-radius: 20px;
+}
+.text-comtainer {
+  margin-top: -650px;
+}
+.text-comtainer span {
+  color: rgb(255, 102, 0);
+  font-size: 16px;
+}
+.contacts-cooperation {
+  position: relative;
+  top: -10px;
+}

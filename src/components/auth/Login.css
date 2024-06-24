@@ -1,0 +1,57 @@
+.container-login {
+  height: 709px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://asiamountains.net/upload/slide/slide-1960x857-07.jpg)
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50px;
+}
+.login {
+  position: relative;
+  background-color: rgba(240, 242, 245, 0.8);
+  padding: 150px;
+  border-radius: 50px;
+  text-align: center;
+  width: 300px;
+  top: 30px;
+}
+.login h1 {
+  margin-bottom: -7px;
+  top: -40px;
+  position: relative;
+}
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login button {
+  position: relative;
+  left: 12px;
+  width: 76%;
+  padding: 10px;
+  background-color: rgba(255, 81, 0, 0.919);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.login button:hover {
+  background-color: #0b1827;
+}
+.login p {
+  margin-top: 10px;
+  color: rgba(255, 81, 0, 0.919);
+  cursor: pointer;
+}
+.login p:hover {
+  text-decoration: underline;
+}

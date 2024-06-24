@@ -1,0 +1,100 @@
+body {
+  overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.patr_1_text1 {
+  position: relative;
+  top: 209px;
+  left: 36px;
+  font-size: 50px;
+  font-weight: 500;
+  z-index: 1;
+}
+.patr_1_text1-1 {
+  color: rgba(255, 81, 0, 0.919);
+}
+.part-1 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.patr_1_text2 {
+  position: relative;
+  top: 132px;
+  left: 603px;
+  z-index: 1;
+}
+.patr_1_img1 {
+  position: relative;
+  top: 56px;
+  left: 81%;
+  z-index: 1;
+}
+.patr_1_img2 {
+  position: relative;
+  top: -122px;
+  left: 62%;
+  width: 59px;
+  height: 78px;
+  z-index: 1;
+}
+.appbar {
+  width: 250px;
+  position: relative;
+  top: 100px;
+  border-radius: 29px;
+  transition: transform 0.2s;
+  left: 80%;
+}
+.appbar:hover {
+  transform: scale(1.05);
+}
+.search_section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 33px;
+  top: 72px;
+}
+
+.search_input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  width: 200px;
+  margin-right: 10px;
+  font-family: "Montserrat";
+  border-color: orange;
+  border-width: 1px;
+}
+
+.search_button {
+  position: relative;
+  padding: 10px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  border-width: 1px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-color: orange;
+  border-style: solid;
+  font-family: "Montserrat";
+  transition: background-color 0.3s;
+}
+
+.search_button:hover {
+  background-color: rgba(255, 81, 0, 0.919);
+  color: white;
+}
+.search {
+  position: relative;
+  right: 105px;
+}

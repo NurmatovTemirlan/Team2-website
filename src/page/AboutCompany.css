@@ -1,0 +1,87 @@
+.text-header {
+  color: #363636;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.text-header span {
+  color: rgb(255, 102, 0);
+}
+.text-header h2 {
+  position: relative;
+  left: 7%;
+  line-height: 32px;
+  top: 179px;
+}
+.text-container {
+  margin-top: 200px;
+}
+.text-container h4 {
+  margin-left: 110px;
+}
+.text-container img {
+  width: 550px;
+  height: 550px;
+  margin-left: 60%;
+  border-radius: 20px;
+  margin-top: -500px;
+}
+.text-container p {
+  width: 750px;
+  margin-left: 110px;
+  line-height: 30px;
+}
+.text-container h5 {
+  top: -87px;
+  position: relative;
+  margin-left: 7%;
+}
+.About-company {
+  margin-top: -190px;
+}
+.About-company h1 {
+  margin-top: 338px;
+  margin-left: 120px;
+  font-size: 40px;
+}
+.About-logo {
+  margin-left: 120px;
+  margin-top: -60px;
+  width: 200px;
+}
+.About-company p {
+  width: 700px;
+  margin-left: 750px;
+  margin-top: -300px;
+  line-height: 29px;
+}
+.Partner h6 {
+  font-size: 38px;
+  margin-top: 50px;
+  margin-left: 90px;
+  line-height: 40px;
+}
+.Partner p {
+  font-size: 15px;
+  width: 500px;
+  margin-left: 90px;
+  line-height: 28px;
+  margin-top: -40px;
+}
+.Partner .img1 {
+  margin-left: 700px;
+  width: 400px;
+  margin-top: -500px;
+}
+.Partner .img2 {
+  border-radius: 20px;
+  background-color: #ffffff;
+  background-position: 50% 50%;
+  background-size: 101.918%;
+  background-repeat: no-repeat;
+  border-color: transparent;
+  border-style: solid;
+  width: 250px;
+  margin-left: 75%;
+  margin-top: -120px;
+}
