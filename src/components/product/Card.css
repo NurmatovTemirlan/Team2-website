@@ -1,20 +1,57 @@
 .card-image {
+  top: -5px;
+  right: 30px;
+  position: relative;
   border-radius: 25px;
-  height: 272px;
-  width: 375px;
+  height: 277px;
+  width: 405px;
   background-size: cover;
 }
+.card-list {
+  width: 345px;
+  padding: 5px 30px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.card-list:hover {
+  transform: scale(1.03);
+}
 .card-category {
-  top: -392px;
   position: relative;
+  top: -415px;
   border-width: 1px;
   border-radius: 50px;
   background-color: rgb(255, 81, 0);
   color: white;
-  padding: 5px 30px;
+  padding: 7px 30px;
   font-size: 13px;
   font-family: "Montserrat";
-  left: 16px;
+  left: -13px;
+}
+.card-type {
+  position: relative;
+  top: -197px;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-family: "Montserrat";
+  left: -152px;
+  padding: 6px 20px;
+}
+.card-day {
+  position: relative;
+  top: -184px;
+  border-width: 1px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  font-family: "Montserrat";
+  left: -146px;
 }
 .card-price {
   font-weight: 500;
@@ -31,4 +68,48 @@
   font-weight: 400;
   margin-top: 8px;
   width: 384px;
+}
+.container-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+.edit {
+  left: 84px;
+  border-color: rgb(255, 157, 0);
+  position: relative;
+  border-width: 0px;
+  border-radius: 50px;
+  background-color: rgb(255, 157, 0);
+  color: white;
+  padding: 5px 30px;
+  font-size: 13px;
+  font-family: "Montserrat";
+}
+.delete {
+  top: 1px;
+  left: 239px;
+  position: relative;
+  border-width: 0px;
+  border-radius: 50px;
+  background-color: rgb(234, 12, 12);
+  color: white;
+  border-color: rgb(234, 12, 12);
+  padding: 5px 30px;
+  font-size: 13px;
+  font-family: "Montserrat";
+}
+.details {
+  height: 54px;
+  width: 148px;
+  top: 25px;
+  right: 22px;
+  position: relative;
+  border-width: 0px;
+  border-radius: 50px;
+  background-color: rgb(255, 81, 0);
+  color: white;
+  border-color: rgb(255, 81, 0);
+  padding: 5px 30px;
+  font-size: 13px;
+  font-family: "Montserrat";
 }

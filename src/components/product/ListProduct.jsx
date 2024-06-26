@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useProducts } from "../context/ProductContext";
 import CardProduct from "./CardProduct";
+import "./Card.css";
 
 const ListProduct = () => {
   const { products, getProducts } = useProducts();
@@ -8,7 +9,10 @@ const ListProduct = () => {
     getProducts();
   }, []);
   return (
-    <div style={{ position: "relative", top: "200px" }}>
+    <div
+      style={{ position: "relative", top: "40px" }}
+      className="container-card"
+    >
       {products.map((elem) => (
         <CardProduct elem={elem} key={elem.id} />
       ))}

@@ -21,6 +21,9 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  background: url(https://asiamountains.net/upload/slide/slide-1960x857-07.jpg)
+    no-repeat center center;
+  background-size: cover;
 }
 .patr_1_text2 {
   position: relative;
@@ -60,10 +63,13 @@ body {
   align-items: center;
   left: 33px;
   top: 72px;
+  transition: transform 0.2s;
 }
-
+.search_section:hover {
+  transform: scale(1.05);
+}
 .search_input {
-  padding: 10px;
+  padding: 10px 37px;
   font-size: 16px;
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -73,7 +79,6 @@ body {
   border-color: orange;
   border-width: 1px;
 }
-
 .search_button {
   position: relative;
   padding: 10px 28px;
@@ -96,5 +101,5 @@ body {
 }
 .search {
   position: relative;
-  right: 105px;
+  right: 280px;
 }

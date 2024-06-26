@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useProducts } from "../components/context/ProductContext";
 import { Search } from "@mui/icons-material";
+import Filterr from "../components/product/Filterr";
 
 const Tours = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -49,10 +50,9 @@ const Tours = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="search_input"
         />
-        <button className="search_button">Поиск</button>
         <SearchIcon className="search" />
       </div>
-
+      <Filterr />
       <ListProduct />
     </div>
   );

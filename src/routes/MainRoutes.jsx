@@ -8,11 +8,12 @@ import Сonsultation from "../page/Сonsultation";
 import { Route, Routes } from "react-router-dom";
 import Register from "../components/auth/Register";
 import Login from "../components/auth/Login";
-import AddProduct from "../components/product/AddProduct";
-import EditProduct from "../components/product/EditProduct";
+import AdminPage from "../page/AdminPage";
+import EditPage from "../page/EditPage";
+import DetailsPagee from "../components/product/DetailsPagee";
 export const ADMIN_ROUTES = [
-  { id: 1, link: "/add", element: <AddProduct /> },
-  { id: 2, link: "/edit/:id", element: <EditProduct /> },
+  { id: 1, link: "/admin", element: <AdminPage /> },
+  { id: 2, link: "/edit/:id", element: <EditPage /> },
 ];
 const PUBLIC_ROUTES = [
   { id: 1, link: "/", element: <HomePage /> },
@@ -23,6 +24,7 @@ const PUBLIC_ROUTES = [
   { id: 6, link: "/consultation", element: <Сonsultation /> },
   { id: 7, link: "/register", element: <Register /> },
   { id: 8, link: "/login", element: <Login /> },
+  { id: 9, link: "/details/:id", element: <DetailsPagee /> },
 ];
 const MainRoutes = () => {
   return (

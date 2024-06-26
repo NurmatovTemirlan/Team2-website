@@ -265,6 +265,8 @@
   font-size: 56px;
   font-weight: 600;
   padding-left: 28px;
+  position: relative;
+  top: 100px;
 }
 
 .part_3_1 {
@@ -277,6 +279,8 @@
   flex-grow: 1;
   padding-right: 28px;
   gap: 90px;
+  top: 119px;
+  position: relative;
 }
 
 .card {
@@ -338,7 +342,7 @@
   border-style: solid;
 }
 .part3_btn {
-  margin-top: 20px;
+  margin-top: 156px;
   margin-left: 40px;
   border-width: 1px;
   border-radius: 500px;
@@ -410,7 +414,7 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .card_2:hover {
@@ -481,7 +485,7 @@
 }
 
 .social-link_part5 {
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0 10px;
   font-size: 56px;
   color: #ff6600;
@@ -643,4 +647,14 @@
 .contacts-home {
   position: relative;
   top: 145px;
+}
+.tour {
+  position: relative;
+  top: 20px;
+}
+.Paginition {
+  display: flex;
+  position: relative;
+  top: 20px;
+  justify-content: center;
 }

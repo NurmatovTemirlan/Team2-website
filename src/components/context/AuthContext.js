@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { API } from "../../helpers/const";
-import { json, useNavigate } from "react-router-dom";
 export const authContext = createContext();
 export const useAuth = () => useContext(authContext);
 const AuthContext = ({ children }) => {

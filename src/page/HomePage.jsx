@@ -1,6 +1,6 @@
 import "./Home.css";
-import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -10,6 +10,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { CSSTransition } from "react-transition-group";
 import Сontacts from "./Сontacts";
+import ListProduct from "../components/product/ListProduct";
+import { useProducts } from "../components/context/ProductContext";
+import Paginition from "../components/product/Paginition";
+import CardProduct from "../components/product/CardProduct";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -23,6 +27,35 @@ const HomePage = () => {
   const handleButtonClick = (buttonType) => {
     setActiveButton(buttonType);
   };
+
+  const { getProducts, products } = useProducts();
+  const [page, setPage] = useState(1);
+  useEffect(() => {
+    getProducts();
+    setPage(1);
+  }, []);
+  const itemPerPage = 1;
+  const count = Math.ceil(products.length / itemPerPage);
+  const currentData = () => {
+    const begin = (page - 1) * itemPerPage;
+    const end = begin + itemPerPage;
+    return products.slice(begin, end);
+  };
+  const handleChange = (e, value) => {
+    setPage(value);
+  };
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
+
+  useEffect(() => {
+    getProducts();
+  }, [searchParams]);
   return (
     <div className="container">
       <div className="part_1">
@@ -112,6 +145,7 @@ const HomePage = () => {
         </h3>
       </div>
       <button
+        value="Групповые"
         className={`part_2_btn1 ${
           activeButton === "group" ? "active" : "inactive"
         }`}
@@ -120,6 +154,7 @@ const HomePage = () => {
         Групповые
       </button>
       <button
+        value="Индивидуальные"
         className={`part_2_btn2 ${
           activeButton === "individual" ? "active" : "inactive"
         }`}
@@ -130,7 +165,14 @@ const HomePage = () => {
       <button className="part_2_btn3" onClick={() => navigate("/tour")}>
         Все туры
       </button>
-      <div className="tour"></div>
+      <div className="tour">
+        {currentData().map((elem) => (
+          <CardProduct key={elem.id} elem={elem} />
+        ))}
+        <div className="Paginition">
+          <Paginition page={page} count={count} handleChange={handleChange} />
+        </div>
+      </div>
       <div className="part_3">
         <div className="part_3_text">
           <span className="part_3_1">Немного</span> <br />
