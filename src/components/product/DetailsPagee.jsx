@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useParams } from "react-router-dom";
-import "./Details.css";
+
 const DetailsPage = () => {
   const { oneProduct, getOneProduct } = useProducts();
   const { id } = useParams();
@@ -18,15 +18,39 @@ const DetailsPage = () => {
   return (
     <div>
       {oneProduct ? (
-        <div>
-          <img src={oneProduct.picture} alt="" className="card-image" />
-          <h1 className="card-price">${oneProduct.price}</h1>
-          <h2 className="card-title">{oneProduct.title}</h2>
-          <h3 className="card-description">{oneProduct.description}</h3>
-          <span className="card-category">{oneProduct.category}</span>
-          <span className="card-type">{oneProduct.type}</span>
-          <span className="card-day">{oneProduct.day} дня</span>
-        </div>
+        <Container sx={{ mt: 8 }}>
+          <Card sx={{ maxWidth: "100%", mb: 10 }}>
+            <CardActionArea sx={{ height: 600, display: "flex", p: 2 }}>
+              <CardMedia
+                sx={{ width: 500, objectFit: "contain" }}
+                component="img"
+                height="300"
+                image={oneProduct.picture}
+                alt="product"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h3" component="div">
+                  {oneProduct.title}
+                </Typography>
+                <br />
+                <Typography variant="h4" color="text.secondary" component="div">
+                  {oneProduct.description}
+                </Typography>
+                <br />
+                <CardContent>
+                  <Typography
+                    variant="h4"
+                    component="div"
+                    color="text.secondary"
+                  >
+                    {oneProduct.price}$
+                  </Typography>
+                </CardContent>
+              </CardContent>
+            </CardActionArea>
+            <Button>КУПИТЬ</Button>
+          </Card>
+        </Container>
       ) : (
         <h1>loading</h1>
       )}

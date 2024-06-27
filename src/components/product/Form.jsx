@@ -69,6 +69,7 @@ const Form = ({ isEdit }) => {
       day: "",
       picture: "",
     });
+    navigate("/tour");
   }
   return (
     <div className="form">
@@ -146,7 +147,7 @@ const Form = ({ isEdit }) => {
             Сохранить
           </button>
         ) : (
-          <button onClick={addProduct} className="button">
+          <button onClick={addProduct} to={"/tour"} className="button">
             Добавить
           </button>
         )}

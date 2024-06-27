@@ -16,6 +16,7 @@ const Navbarr = () => {
   return (
     <div className="navbar">
       <nav className="navbar-container">
+        <div onClick={() => navigate("/admin")}>+</div>
         <ul className="nav-menu">
           <li className="nav-item">
             <a className="nav-links" onClick={() => navigate("/company")}>

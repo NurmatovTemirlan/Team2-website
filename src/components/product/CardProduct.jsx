@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useProducts } from "../context/ProductContext";
 import { useNavigate } from "react-router-dom";
 import "./Card.css";
@@ -11,8 +11,33 @@ const CardProduct = ({ elem }) => {
     elem.description.length > MAX_TITLE_LENGTH
       ? `${elem.description.slice(0, MAX_TITLE_LENGTH)}...`
       : elem.description;
+
+  const cardRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="card-list">
+    <div className="card-list" ref={cardRef}>
       <img src={elem.picture} alt="" className="card-image" />
       <h1 className="card-price">${elem.price}</h1>
       <h2 className="card-title">{elem.title}</h2>

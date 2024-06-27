@@ -34,7 +34,7 @@ const HomePage = () => {
     getProducts();
     setPage(1);
   }, []);
-  const itemPerPage = 1;
+  const itemPerPage = 3;
   const count = Math.ceil(products.length / itemPerPage);
   const currentData = () => {
     const begin = (page - 1) * itemPerPage;
@@ -169,9 +169,9 @@ const HomePage = () => {
         {currentData().map((elem) => (
           <CardProduct key={elem.id} elem={elem} />
         ))}
-        <div className="Paginition">
-          <Paginition page={page} count={count} handleChange={handleChange} />
-        </div>
+      </div>
+      <div className="Paginition">
+        <Paginition page={page} count={count} handleChange={handleChange} />
       </div>
       <div className="part_3">
         <div className="part_3_text">
